@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* Gradient text */
+.grad-text {
+  background: linear-gradient(
+    135deg,
+    #00f5ff 0%,
+    #0ea5e9 30%,
+    #a855f7 60%,
+    #ec4899 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-text-2 {
+  background: linear-gradient(90deg, #f472b6, #a855f7, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid bg */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Dark grid bg */
+.dark .grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+}
+
+/* Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark .glass {
+  background: rgba(10, 20, 40, 0.6);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+/* Hover glass */
+.hover-glass:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Card hover */
