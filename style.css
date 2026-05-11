@@ -66,3 +66,22 @@ body {
 }
 
 /* Card hover */
+.feature-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s,
+    border 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Testimonial slider */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tst-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
