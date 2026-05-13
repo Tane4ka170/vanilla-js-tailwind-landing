@@ -34,7 +34,35 @@ tailwind.config = {
         marquee: "marquee 20s linear infinite",
         "pulse-ring": "pulseRing 2s ease-out infinite",
       },
-      keyframes: {},
+      keyframes: {
+        float: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-18px)" },
+        },
+        glow: {
+          "0%,100%": { boxShadow: "0 0 20px rgba(14,165,233,0.4)" },
+          "50%": {
+            boxShadow:
+              "0 0 50px rgba(14,165,233,0.9), 0 0 100px rgba(14,165,233,0.4)",
+          },
+        },
+        slideInLeft: {
+          from: { opacity: 0, transform: "translateX(-60px)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
+        fadeUp: {
+          from: { opacity: 0, transform: "translateY(40px)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        pulseRing: {
+          "0%": { transform: "scale(1)", opacity: 1 },
+          "100%": { transform: "scale(1.8)", opacity: 0 },
+        },
+      },
     },
   },
 };
