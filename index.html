@@ -28,7 +28,40 @@
     >
       <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <!-- Logo -->
-        <div class="flex items-center gap2"></div>
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="k-2-logo" class="w-full h-full" />
+        </div>
+
+        <!-- Nav links desktop -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#course" class="hover:text-cyne-500 transition-colors"
+            >Courses</a
+          >
+          <a href="#features" class="hover:text-cyne-500 transition-colors"
+            >Features</a
+          >
+          <a href="#testimonail" class="hover:text-cyne-500 transition-colors"
+            >Reviews</a
+          >
+          <a href="#more-courses" class="hover:text-cyne-500 transition-colors"
+            >More Courses</a
+          >
+          <a href="#contact" class="hover:text-cyne-500 transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Dark mode toggle -->
+          <button
+            id="themeToggle"
+            class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-110 transition-transform bg-white dark:bg-slate-800"
+          >
+            <span id="moonIcon"></span>
+            <span id="sunIcon"></span>
+          </button>
+        </div>
       </div>
     </nav>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
