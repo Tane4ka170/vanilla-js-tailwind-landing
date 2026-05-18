@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Master in Programming with AI</title>
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,9 +64,16 @@
             id="themeToggle"
             class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:scale-110 transition-transform bg-white dark:bg-slate-800"
           >
-            <span id="moonIcon"></span>
-            <span id="sunIcon"></span>
+            <span id="moonIcon"><i class="fa-solid fa-moon"></i></span>
+            <span id="sunIcon" class="hidden"
+              ><i class="fa-solid fa-sun"></i
+            ></span>
           </button>
+
+          <a
+            href="#"
+            class="hidden mx:block px-5 py-2 rounded-full bg-gradient-to-r"
+          ></a>
         </div>
       </div>
     </nav>
