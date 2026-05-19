@@ -85,3 +85,17 @@ body {
 .tst-card {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
+/* Nav scroll */
+.nav-scrolled {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #00f5ff, #a855f7, #ec4899);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
