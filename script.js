@@ -1,3 +1,12 @@
+// Theme toggle
+const html = document.documentElement;
+const toggle = document.getElementById(".themeToggle");
+const moon = document.getElementById(".moonIcon");
+const sun = document.getElementById(".sunIcon");
+
+const saved = localStorage.getItem("theme") || "light";
+html.classList.toggle("dark", saved);
+
 tailwind.config = {
   darkMode: "class",
   theme: {
