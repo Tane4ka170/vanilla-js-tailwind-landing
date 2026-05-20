@@ -5,7 +5,60 @@ const moon = document.getElementById(".moonIcon");
 const sun = document.getElementById(".sunIcon");
 
 const saved = localStorage.getItem("theme") || "light";
-html.classList.toggle("dark", saved);
+html.classList.toggle("dark", saved === "dark");
+moon.classList.toggle("hidden", saved === "dark");
+sun.classList.toggle("dark", saved !== "dark");
+
+toggle.addEventListener("click", () => {
+  const isDark = html.classList.toggle("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  moon.classList.toggle("hidden", isDark);
+  sun.classList.toggle("dark", !isDark);
+});
+
+// Navbar scroll
+const navbar = document.getElementById("navbar");
+const progressBar = document.getElementById("progressBar");
+
+window.addEventListener("scroll", () => {
+  const scrolld = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  const ptc = scrolld / total;
+
+  // Progress bar
+  if (scrolld > 60) {
+    navbar.classList.add("glass", "nav-scrolled");
+  } else {
+    navbar.classList.remove("glass", "nav-scrolled");
+  }
+  // Reveal on screen
+  document.querySelectorAll(".reveal").forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add("visible");
+    }
+  });
+});
+// Initial reveal
+setTimeout(() => window.dispatchEvent(new Event("scroll")), 100);
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+let menuOpen = false;
+
+menuBtn.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  menuBtn.classList.toggle("hidden", !menuOpen);
+});
+
+function closeMobile() {
+  menuOpen = false;
+  mobileMenu.classList.add("hidden");
+}
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
 
 tailwind.config = {
   darkMode: "class",
