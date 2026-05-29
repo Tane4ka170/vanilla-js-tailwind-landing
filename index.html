@@ -132,12 +132,47 @@
       </div>
     </nav>
 
-    <section
-      class="relative min-h-screen overflow-hidden grid-bg noise pt-20"
-    >
-  <!-- Blobs -->
-   <div></div>
-  </section>
+    <section class="relative min-h-screen overflow-hidden grid-bg noise pt-20">
+      <!-- Blobs -->
+      <div
+        class="blob absolute -top-40 -left-40 w-[500px] h-[500px] bg-cyan-400/10 dark:bg-cyan-500/15 blur-3xl pointer-events-none"
+      ></div>
+
+      <div
+        class="blob absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-purple-500/10 dark:bg-purple-500/15 blur-3xl pointer-events-none"
+        style="animation-delay: 3s"
+      ></div>
+
+      <div
+        class="blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-pink-400/8 dark:bg-pink-500/10 blur-3xl pointer-events-none"
+        style="animation-delay: 5s"
+      ></div>
+
+      <!-- Orbit decorations -->
+      <div
+        class="orbit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] hidden lg:block animate-spin-slow opacity-30"
+      ></div>
+      <div
+        class="orbit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] hidden lg:block animate-spin-slow opacity-20"
+        style="animation-direction: reverse; animation-duration: 30s"
+      ></div>
+
+      <!-- Floating code particles -->
+      <div
+        class="absolute inset-0 overlow-hidden pointer-events-none selec-none hidden md:block"
+      >
+        <div
+          class="absolute top-24 left-[8%] text-cyan-400/80 dark:text-cyan-400/40 font-mono text-sm animate-float"
+        >
+          {'AI':True}
+        </div>
+        <div
+          class="absolute top-24 right-[12%] text-purple-400/80 dark:text-purple-400/40 font-mono text-sm animate-float"
+        >
+          print('Hello World')
+        </div>
+      </div>
+    </section>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="script.js"></script>
   </body>
